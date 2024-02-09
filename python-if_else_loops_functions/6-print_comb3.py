@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for i in range(10):
-    for k in range(10):
-        if i != k:
-            print(str(i) + str(k))
+for z in range(10):
+    for b in range(10):
+        if z != b:
+            print("{}{}, ".format(z, b), end="")
