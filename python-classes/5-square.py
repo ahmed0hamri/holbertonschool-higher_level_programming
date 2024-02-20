@@ -33,10 +33,9 @@ class Square:
         self._Square__size = value
 
     def my_print(self):
-    if Self._Square__size == 0:
-        print()
-    else:
-        square_line = "#" * self._Square__size
-        for _ in range(self._Square__size):
-            print(square_line)
-
+        if self._Square__size == 0:
+            print()
+        for line in range(self._Square__size):
+            for col in range(self._Square__size):
+                print("#", end="")
+            print()
