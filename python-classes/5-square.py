@@ -3,9 +3,6 @@
 """
 
 
-from typing import Self
-
-
 class Square:
     """a class that creates a square
 
