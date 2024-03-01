@@ -18,7 +18,6 @@ class Rectangle:
     integer and greater than or equal to 0. Raises a TypeError otherwise.
     """
 
-
     @property
     def height(self):
         return self.__height
