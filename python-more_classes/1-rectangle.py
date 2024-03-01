@@ -13,8 +13,7 @@ class Rectangle:
         self.height = height
         self.width = width
 
-
-"""
+    """
     Property setter for the height attribute, validating that the input is an
     integer and greater than or equal to 0. Raises a TypeError otherwise.
     """
@@ -31,9 +30,10 @@ def height(self, value):
         raise TypeError("height must be an integer")
     elif value < 0:
         raise ValueError("height must be >= 0")
+    self.__height = value
 
 
-"""
+    """
     Property setter for the weight attribute, validating that the input is an
     integer and greater than or equal to 0. Raises a TypeError otherwise.
     """
@@ -50,3 +50,4 @@ def width(self, value):
         raise TypeError("width must be an integer")
     elif value < 0:
         raise ValueError("width must be >= 0")
+    self.__width
