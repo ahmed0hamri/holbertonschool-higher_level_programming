@@ -10,8 +10,8 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
 
     """
     Property setter for the height attribute, validating that the input is an
@@ -22,9 +22,8 @@ class Rectangle:
     def height(self):
         return self.__height
 
-
     """
-    Property setter for the weight attribute, validating that the input is an
+    Property setter for the height attribute, validating that the input is an
     integer and greater than or equal to 0. Raises a TypeError otherwise.
     """
 
@@ -36,9 +35,8 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     """
-    Property setter for the weight attribute, validating that the input is an
+    Property setter for the width attribute, validating that the input is an
     integer and greater than or equal to 0. Raises a TypeError otherwise.
     """
 
@@ -46,9 +44,8 @@ class Rectangle:
     def width(self):
         return self.__width
 
-
     """
-    Property setter for the weight attribute, validating that the input is an
+    Property setter for the width attribute, validating that the input is an
     integer and greater than or equal to 0. Raises a TypeError otherwise.
     """
 
@@ -58,4 +55,4 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width
+        self.__width = value
