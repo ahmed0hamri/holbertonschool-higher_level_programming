@@ -5,6 +5,4 @@ def safe_print_integer(value):
     except:
         return False
 
-# Example usage:
-print(safe_print_integer(10))  # True
-print(safe_print_integer("Hello"))  # False
+
