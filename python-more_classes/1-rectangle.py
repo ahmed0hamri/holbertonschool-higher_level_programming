@@ -1,58 +1,31 @@
 #!/usr/bin/python3
-"""
-    This class creates an empty rectangle
-"""
-
-
 class Rectangle:
-    """
-    rectangle
-    """
-
     def __init__(self, width=0, height=0):
-        self.__height = height
-        self.__width = width
-
-    """
-    Property setter for the height attribute, validating that the input is an
-    integer and greater than or equal to 0. Raises a TypeError otherwise.
-    """
-
-    @property
-    def height(self):
-        return self.__height
-
-    """
-    Property setter for the height attribute, validating that the input is an
-    integer and greater than or equal to 0. Raises a TypeError otherwise.
-    """
-
-    @height.setter
-    def height(self, value):
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = value
-
-    """
-    Property setter for the width attribute, validating that the input is an
-    integer and greater than or equal to 0. Raises a TypeError otherwise.
-    """
+        self.__width = 0
+        self.__height = 0
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         return self.__width
 
-    """
-    Property setter for the width attribute, validating that the input is an
-    integer and greater than or equal to 0. Raises a TypeError otherwise.
-    """
-
     @width.setter
     def width(self, value):
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
+        self.__validate_dimension(value)
         self.__width = value
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        self.__validate_dimension(value)
+        self.__height = value
+
+    def __validate_dimension(self, value):
+        if not isinstance(value, int):
+            raise TypeError("Dimension must be an integer")
+        if value < 0:
+            raise ValueError("Dimension must be >= 0")
