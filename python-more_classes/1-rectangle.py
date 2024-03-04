@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-!/usr/bin/python3
 
 """
 This script defines a Rectangle class with properties for width and height,
@@ -61,4 +60,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-        
