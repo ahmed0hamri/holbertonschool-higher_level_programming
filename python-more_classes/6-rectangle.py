@@ -15,9 +15,13 @@ class Rectangle:
     Defaults to zero if no values are provided.
     """
 
+    # public instance
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     """
     Property getter for the height attribute,
@@ -85,11 +89,5 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-
-    # public instance
-    number_of_instances = 0
-
-    def __init__(self, width=0, height=0):
-        self.height = height
-        self.width = width
-        Rectangle.number_of_instances += 1
+        Rectangle.number_of_instances -= 1
+        
