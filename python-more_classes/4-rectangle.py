@@ -78,6 +78,5 @@ class Rectangle:
             return ""
         return "\n".join(["#" * self.rec_width] * self.rec_height)
 
-
-def __repr__(self):
-    return f"Rectangle(width={self.rec_width}, height={self.rec_height})"
+    def __repr__(self):
+        return f"Rectangle(width={self.rec_width}, height={self.rec_height})"
